@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body bg-cream-50 text-slate-800 antialiased;
+  }
+  
+  ::selection {
+    @apply bg-sage-500 text-white;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold text-slate-850 mb-2;
+  }
+  
+  .section-subtitle {
+    @apply text-slate-500 text-lg mb-12;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-cream-200 p-6 
+           hover:shadow-md hover:border-sage-400/30 transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-slate-850 text-white 
+           rounded-full font-medium hover:bg-slate-700 transition-all duration-300
+           hover:shadow-lg hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-850 
+           border-2 border-slate-850 rounded-full font-medium 
+           hover:bg-slate-850 hover:text-white transition-all duration-300;
+  }
+  
+  .skill-tag {
+    @apply px-4 py-2 bg-cream-200 text-slate-700 rounded-full text-sm font-medium
+           hover:bg-sage-400 hover:text-white transition-all duration-300 cursor-default;
+  }
+  
+  .nav-link {
+    @apply text-slate-600 hover:text-slate-850 font-medium transition-colors duration-200
+           relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 
+           after:bg-sage-500 after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-sage-500 via-copper-500 to-sage-600 bg-clip-text text-transparent;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sage-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sage-500;
+}
